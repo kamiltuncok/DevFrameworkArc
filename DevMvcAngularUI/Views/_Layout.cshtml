@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="~/libs/system.js"></script>
+    <script src="~/libs/s.min.js"></script>
+    <script src="~/libs/zone.js"></script>
+
+    <!-- Import systemjs.config.js -->
+    <script src="~/Scripts/systemjs.config.js"></script>
+    <script>
+        System.import('../Scripts/src/main.js').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
